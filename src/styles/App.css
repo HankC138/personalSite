@@ -1,0 +1,33 @@
+* {
+	color: lime;
+	background-color: black;
+}
+.typeSpace {
+	background-color: black;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	outline: none;
+	font-size: 1.5rem;
+}
+input {
+	border-bottom: dashed 1px lime;
+	font-family: "fira code";
+	font-size: 1.5rem;
+}
+span {
+	margin-left: 1rem;
+}
+
+ul {
+	list-style: none;
+}
+li::before {
+	content: "\2771\2771\2771\2771";
+}
+.headItem::before {
+	content: "\2771\2771";
+}
+.nameBanner {
+	font-size: 6px;
+}
