@@ -9,11 +9,15 @@ import { Route, Routes, useNavigate } from "react-router";
 
 function App() {
 	const [currentCommand, setCurrentCommand] = useState("");
+	const [previousCommands, setPreviousCommands] = useState([]);
 	const navigate = useNavigate();
+	const commands = ["--help", "about", "portfolio", "home"];
 	const handleSubmit = (event) => {
-		const commands = ["--help", "about", "portfolio", "intro"];
 		event.preventDefault();
 		const commandLowered = currentCommand.toLowerCase();
+		console.log(previousCommands);
+		setPreviousCommands(previousCommands.concat(commandLowered));
+		console.log(previousCommands);
 		if (commands.includes(commandLowered) === false) {
 			navigate("/notfound");
 		}
@@ -28,6 +32,10 @@ function App() {
 		}
 		if (commandLowered === "home") {
 			navigate("/home");
+		}
+		if (commandLowered === "clear") {
+			setPreviousCommands([]);
+			navigate("/");
 		}
 		setCurrentCommand("");
 	};
@@ -44,6 +52,19 @@ function App() {
 				</Routes>
 			</div>
 			<div className="typeSpace">
+				<ul className="previousCommands">
+					{previousCommands.map((command, index) =>
+						commands.includes(command) ? (
+							<li className="valid" key={index}>
+								{command}
+							</li>
+						) : (
+							<li className="invalid" key={index}>
+								{command}
+							</li>
+						)
+					)}
+				</ul>
 				<form onSubmit={(event) => handleSubmit(event)}>
 					<span className="terminalTitle"> &#10097; CorbinCampbell </span>
 					<input

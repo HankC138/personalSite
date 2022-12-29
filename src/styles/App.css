@@ -31,3 +31,14 @@ li::before {
 .nameBanner {
 	font-size: 6px;
 }
+.valid::before {
+	font-size:1rem;
+	content: "\2771\0020";
+}
+.previousCommands {
+	font-size: 0.85rem
+}
+.invalid::before {
+	content: "\2716\0020 command not found: ";
+	color:red;
+}

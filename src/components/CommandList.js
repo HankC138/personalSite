@@ -5,13 +5,13 @@ const CommandList = () => {
 	return (
 		<ul>
 			<li>
-				<Typewriter typeSpeed={15} words={["Home /home page"]} cursor={false} />
+				<Typewriter typeSpeed={15} words={["home /home page"]} cursor={false} />
 			</li>
 			<br />
 			<li>
 				<Typewriter
 					typeSpeed={15}
-					words={["About /about Corbin Campbell page"]}
+					words={["about /about Corbin Campbell page"]}
 					cursor={false}
 				/>
 			</li>
@@ -19,7 +19,15 @@ const CommandList = () => {
 			<li>
 				<Typewriter
 					typeSpeed={15}
-					words={["Portfolio /portfolio page"]}
+					words={["portfolio /portfolio page"]}
+					cursor={false}
+				/>
+			</li>
+			<br />
+			<li>
+				<Typewriter
+					typeSpeed={15}
+					words={["clear /clear the console"]}
 					cursor={false}
 				/>
 			</li>
