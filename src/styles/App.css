@@ -1,6 +1,7 @@
 * {
 	color: lime;
 	background-color: black;
+	box-sizing: border-box;
 }
 .typeSpace {
 	background-color: black;
@@ -25,20 +26,35 @@ ul {
 li::before {
 	content: "\2771\2771\2771\2771";
 }
+.headItem,
+.contentItem {
+	margin-bottom: 1rem;
+}
 .headItem::before {
 	content: "\2771\2771";
 }
-.nameBanner {
-	font-size: 6px;
+.languages::before {
+	content: "\2771";
+}
+.languages li::before {
+	content: "\25A0";
+}
+.languages li {
+	margin-left: 1rem;
 }
 .valid::before {
-	font-size:1rem;
+	font-size: 1rem;
 	content: "\2771\0020";
 }
 .previousCommands {
-	font-size: 0.85rem
+	font-size: 0.85rem;
 }
 .invalid::before {
 	content: "\2716\0020 command not found: ";
-	color:red;
+	color: red;
+}
+.nameBanner {
+	font-weight: bold;
+	font-size: 0.8rem;
+	line-height: 0;
 }

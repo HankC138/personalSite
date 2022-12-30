@@ -27,6 +27,14 @@ const CommandList = () => {
 			<li>
 				<Typewriter
 					typeSpeed={15}
+					words={["github /redirect to github profile"]}
+					cursor={false}
+				/>
+			</li>
+			<br />
+			<li>
+				<Typewriter
+					typeSpeed={15}
 					words={["clear /clear the console"]}
 					cursor={false}
 				/>

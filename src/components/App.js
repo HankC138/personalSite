@@ -6,12 +6,13 @@ import CommandList from "./CommandList";
 import AboutMe from "./AboutMe";
 import NotFound from "./NotFound";
 import { Route, Routes, useNavigate } from "react-router";
+import NameBanner from "./NameBanner";
 
 function App() {
 	const [currentCommand, setCurrentCommand] = useState("");
 	const [previousCommands, setPreviousCommands] = useState([]);
 	const navigate = useNavigate();
-	const commands = ["--help", "about", "portfolio", "home"];
+	const commands = ["--help", "about", "portfolio", "home", "clear", "github"];
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const commandLowered = currentCommand.toLowerCase();
@@ -37,11 +38,20 @@ function App() {
 			setPreviousCommands([]);
 			navigate("/");
 		}
+		if (commandLowered === "github") {
+			setTimeout(
+				() => window.open("https://github.com/hankc138", "_blank"),
+				1500
+			);
+		}
 		setCurrentCommand("");
 	};
 
 	return (
 		<div>
+			<div className="nameBannerDiv">
+				<NameBanner />
+			</div>
 			<div>
 				<Routes>
 					<Route path="/home" element={<Home />} />
@@ -65,7 +75,7 @@ function App() {
 						)
 					)}
 				</ul>
-				<form onSubmit={(event) => handleSubmit(event)}>
+				<form target="_blank" onSubmit={(event) => handleSubmit(event)}>
 					<span className="terminalTitle"> &#10097; CorbinCampbell </span>
 					<input
 						className="typeSpace"
