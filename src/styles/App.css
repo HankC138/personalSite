@@ -2,6 +2,7 @@
 	color: lime;
 	background-color: black;
 	box-sizing: border-box;
+	user-select: none;
 }
 .terminalTitle {
 	color: cyan
