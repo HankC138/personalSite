@@ -12,7 +12,7 @@ function App() {
 	const [currentCommand, setCurrentCommand] = useState("");
 	const [previousCommands, setPreviousCommands] = useState([]);
 	const navigate = useNavigate();
-	const commands = ["--help", "about", "portfolio", "home", "clear", "github"];
+	const commands = ["--help", "about", "portfolio", "home", "clear", "github", "linkedin"];
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const commandLowered = currentCommand.toLowerCase();
@@ -41,6 +41,12 @@ function App() {
 		if (commandLowered === "github") {
 			setTimeout(
 				() => window.open("https://github.com/hankc138", "_blank"),
+				1500
+			);
+		}
+		if (commandLowered === "linkedin") {
+			setTimeout(
+				() => window.open("https://linkedin.com/in/corbin-campbell", "_blank"),
 				1500
 			);
 		}
@@ -76,7 +82,7 @@ function App() {
 					)}
 				</ul>
 				<form target="_blank" onSubmit={(event) => handleSubmit(event)}>
-					<span className="terminalTitle"> &#10097; CorbinCampbell </span>
+					<span className="terminalTitle"> CorbinCampbell </span>
 					<input
 						className="typeSpace"
 						autoFocus={true}

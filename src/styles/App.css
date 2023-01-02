@@ -3,6 +3,16 @@
 	background-color: black;
 	box-sizing: border-box;
 }
+.terminalTitle {
+	color: cyan
+}
+.terminalTitle::before {
+	content: "\2771\0020";
+	color: lime
+}
+.pageTerminalTitle{
+	color: cyan
+}
 .typeSpace {
 	background-color: black;
 	border-left: none;
@@ -30,14 +40,13 @@ li::before {
 .contentItem {
 	margin-bottom: 1rem;
 }
-.headItem::before {
-	content: "\2771\2771";
-}
 .languages::before {
-	content: "\2771";
+	content: "\2771\0020";
+	color: yellow
 }
 .languages li::before {
-	content: "\25A0";
+	content: "\25A0\0020";
+	color: yellow
 }
 .languages li {
 	margin-left: 1rem;

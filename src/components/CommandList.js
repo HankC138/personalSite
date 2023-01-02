@@ -5,6 +5,7 @@ const CommandList = () => {
 	return (
 		<ul>
 			<li>
+			<span className="pageTerminalTitle">CorbinCampbell: </span>
 				<Typewriter typeSpeed={15} words={["home /home page"]} cursor={false} />
 			</li>
 			<br />
@@ -28,6 +29,14 @@ const CommandList = () => {
 				<Typewriter
 					typeSpeed={15}
 					words={["github /redirect to github profile"]}
+					cursor={false}
+				/>
+			</li>
+			<br />
+			<li>
+				<Typewriter
+					typeSpeed={15}
+					words={["linkedin /redirect to linkedin profile"]}
 					cursor={false}
 				/>
 			</li>

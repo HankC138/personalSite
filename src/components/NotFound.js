@@ -5,7 +5,7 @@ export const NotFound = () => {
 		<div>
 			<ul>
 				<li className="headItem">
-					<span className="terminalTitle">CorbinCampbell: </span>
+					<span className="pageTerminalTitle">CorbinCampbell: </span>
 					<Typewriter
 						typeSpeed={15}
 						words={["Invalid Command"]}
